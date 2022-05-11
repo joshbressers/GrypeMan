@@ -664,19 +664,70 @@ class JsPacman extends Game {
         }
 
         if (this._introStep == 0) {
-            var theText = "TEXT2";
-            document.getElementById('omt-1').innerText = theText;
+            var theText = " ";
+            document.getElementById('syft-1').innerText = theText;
+
+            var theText = "I'M GOING";
+            document.getElementById('grype-1').innerText = theText;
+            var theText = "VULNERABILITY";
+            document.getElementById('grype-2').innerText = theText;
+            var theText = "HUNTING";
+            document.getElementById('grype-3').innerText = theText;
 
             this._introStep = 1;
 
         } else if (this._introStep == 1) {
+            var theText = " ";
+            document.getElementById('grype-1').innerText = theText;
+            document.getElementById('grype-2').innerText = theText;
+            document.getElementById('grype-3').innerText = theText;
+            var theText = "IT'S DANGEROUS TO GO";
+            document.getElementById('syft-1').innerText = theText;
+            var theText = "ALONE";
+            document.getElementById('syft-2').innerText = theText;
+
+            this._introStep = 2;
+        } else if (this._introStep == 2) {
+            var theText = " ";
+            document.getElementById('syft-1').innerText = theText;
+            document.getElementById('syft-2').innerText = theText;
+
+            var theText = "HERE TAKE THIS";
+            document.getElementById('syft-1').innerText = theText;
+            var theText = "IT'S AN SBOM";
+            document.getElementById('syft-2').innerText = theText;
+
+            this._introStep = 3;
+
+        } else if (this._introStep == 3) {
+            var theText = " ";
+            document.getElementById('syft-1').innerText = theText;
+            document.getElementById('syft-2').innerText = theText;
+
+            var theText = "SCAN IT";
+            document.getElementById('syft-1').innerText = theText;
+
+            this._introStep = 4;
+
+        } else if (this._introStep == 4) {
+            var theText = " ";
+            document.getElementById('syft-1').innerText = theText;
+            document.getElementById('syft-2').innerText = theText;
+
+            var theText = "IT WILL OPEN YOUR EYES";
+            document.getElementById('syft-1').innerText = theText;
+            var theText = "TO VULNERABILITIES";
+            document.getElementById('syft-2').innerText = theText;
+
+            this._introStep = 5;
+        } else if (this._introStep == 5) {
             this._introDone = true;
             this.startLevel();
         } else {
             this._introStep = 0;
             // Do nothing
-            var theText = "TEXT1";
-            document.getElementById('omt-1').innerText = theText;
+            var theText = "GOOD MORNING GRYPE";
+            document.getElementById('syft-1').innerText = theText;
         }
     }
 
@@ -733,7 +784,24 @@ class JsPacman extends Game {
             <div class="sound-status on" style="display: none"><span class="wrap">SOUND: <span class="on">ON</span><span class="off">OFF</span></span></div>
             <div class="paused" style="display: none"><span class="wrap">PAUSED</span></div>
             <div class="splash">
-                <p class="nerd" id="old-man-text"><br><br><span id="omt-1"></span><br><span"omt-2"></span></p>
+                <p class="nerd" id="old-man-text"><br><br>
+                    <span id="syft-1"> </span><br>
+                    <span id="syft-2"> </span><br>
+                    <span id="syft-3"> </span><br>
+                    <span></span> <br>
+                    <span></span> <br>
+                    <span></span> <br>
+                    <span></span> <br>
+                    <span></span> <br>
+                    <span></span> <br>
+                    <span></span> <br>
+                    <span></span> <br>
+                    <span></span> <br>
+                    <span></span> <br>
+                    <span id="grype-1"> </span><br>
+                    <span id="grype-2"> </span><br>
+                    <span id="grype-3"> </span><br>
+                </p>
                 <a class="start" style="display: none"></a>
                 <div class="loadbar"><div class="inner"></div></div>
             </div>
