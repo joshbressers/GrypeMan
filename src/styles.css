@@ -112,13 +112,13 @@ body {
 .js-pacman-playground img.sbom {
     position: absolute;
     visibility: hidden;
-    top: 65%;
-    left: 44%;
+    top: 55%;
+    left: 45%;
 }
 
 .js-pacman-playground .splash p.nerd {
     position: absolute;
-    top: 33.15%;
+    top: 26%;
     left: 15%;
     text-align: center;
     color: #FFF;
