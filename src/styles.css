@@ -112,13 +112,13 @@ body {
 .js-pacman-playground .splash p.nerd {
     position: absolute;
     top: 33.15%;
-    left: 35.26%;
+    left: 15%;
     text-align: center;
     color: #FFF;
 }
 
 .js-pacman-playground .splash p span {
-    color : #FFFF00;
+    color : #FFFFFF;
 }
 
 .js-pacman-playground .splash .keys {
