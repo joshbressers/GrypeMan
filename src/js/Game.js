@@ -726,6 +726,7 @@ class JsPacman extends Game {
             var theText = " ";
             document.getElementById('syft-1').innerText = theText;
             document.getElementById('syft-2').innerText = theText;
+            document.getElementById('sbom-img').style.visibility = "hidden";
 
             this._introDone = true;
             this._introStep = -1;
