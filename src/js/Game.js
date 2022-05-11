@@ -28,6 +28,7 @@ const defaults = {
     defaultLives : 3,
     soundEnabled : true,
 
+    // Start the game with a click
     events : {
         'click .start' : 'startLevel'
     }
@@ -35,6 +36,7 @@ const defaults = {
 
 class JsPacman extends Game {
     constructor(options = {}) {
+
         super(options);
 
         Object.keys(defaults).forEach(key => {
@@ -104,6 +106,7 @@ class JsPacman extends Game {
             hide(this.elements.load);
             show(this.elements.start);
         });
+
     }
 
     startLevel() {
@@ -648,6 +651,33 @@ class JsPacman extends Game {
             if (this._paused) this.pause();
             else this.resume();
         }
+        // Use the spacebar to trigger the text
+        else if (event.keyCode === 32) {
+            this.playIntro();
+        }
+    }
+
+    playIntro() {
+
+        if (this._introDone) {
+            return;
+        }
+
+        if (this._introStep == 0) {
+            var theText = "TEXT2";
+            document.getElementById('omt-1').innerText = theText;
+
+            this._introStep = 1;
+
+        } else if (this._introStep == 1) {
+            this._introDone = true;
+            this.startLevel();
+        } else {
+            this._introStep = 0;
+            // Do nothing
+            var theText = "TEXT1";
+            document.getElementById('omt-1').innerText = theText;
+        }
     }
 
     _onChangeScore(model, score) {
@@ -703,9 +733,9 @@ class JsPacman extends Game {
             <div class="sound-status on" style="display: none"><span class="wrap">SOUND: <span class="on">ON</span><span class="off">OFF</span></span></div>
             <div class="paused" style="display: none"><span class="wrap">PAUSED</span></div>
             <div class="splash">
-                <a class="start" style="display: none">START</a>
+                <p class="nerd" id="old-man-text"><br><br><span id="omt-1"></span><br><span"omt-2"></span></p>
+                <a class="start" style="display: none"></a>
                 <div class="loadbar"><div class="inner"></div></div>
-                <p class="keys"><span>&larr;&uarr;&darr;&rarr;</span>:MOVE <span>S</span>:SOUND <span>P</span>:PAUSE</p>
             </div>
         `;
     }
