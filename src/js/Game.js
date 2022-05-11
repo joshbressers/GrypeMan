@@ -805,10 +805,6 @@ class JsPacman extends Game {
                     <span></span> <br>
                     <span></span> <br>
                     <span></span> <br>
-                    <span></span> <br>
-                    <span></span> <br>
-                    <span></span> <br>
-                    <span></span> <br>
                     <span id="grype-1"> </span><br>
                     <span id="grype-2"> </span><br>
                     <span id="grype-3"> </span><br>
