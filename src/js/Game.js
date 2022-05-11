@@ -697,6 +697,8 @@ class JsPacman extends Game {
             var theText = "IT'S AN SBOM";
             document.getElementById('syft-2').innerText = theText;
 
+            document.getElementById('sbom-img').style.visibility = "visible";
+
             this._introStep = 3;
 
         } else if (this._introStep == 3) {
@@ -788,15 +790,15 @@ class JsPacman extends Game {
             </div>
             <div class="start-p1" style="display: none">PLAYER ONE</div>
             <div class="start-ready" style="display: none">READY!</div>
-            <div class="game-over" style="display: none">GAME OVER</div>
+            <div class="game-over" style="display: none">YOU GOT PWNT!</div>
             <div class="sound-status on" style="display: none"><span class="wrap">SOUND: <span class="on">ON</span><span class="off">OFF</span></span></div>
             <div class="paused" style="display: none"><span class="wrap">PAUSED</span></div>
             <div class="splash">
+                <img id="sbom-img" class="sbom" src="img/sbom.png" style="width:50px;height:50px;">
                 <p class="nerd" id="old-man-text"><br><br>
                     <span id="syft-1"> </span><br>
                     <span id="syft-2"> </span><br>
                     <span id="syft-3"> </span><br>
-                    <span></span> <br>
                     <span></span> <br>
                     <span></span> <br>
                     <span></span> <br>
