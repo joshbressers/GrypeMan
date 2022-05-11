@@ -721,9 +721,16 @@ class JsPacman extends Game {
 
             this._introStep = 5;
         } else if (this._introStep == 5) {
+            var theText = " ";
+            document.getElementById('syft-1').innerText = theText;
+            document.getElementById('syft-2').innerText = theText;
+
             this._introDone = true;
+            this._introStep = -1;
             this.startLevel();
         } else {
+
+            // Start the whole process
             this._introStep = 0;
             // Do nothing
             var theText = "GOOD MORNING GRYPE";
@@ -743,6 +750,7 @@ class JsPacman extends Game {
         if (lives === 0) {
             // Game over.
             this._gameOver = true;
+            this._introDone = false;
             show(this.elements.gameOver);
             this.hideGhosts();
             this.pacman.hide();
