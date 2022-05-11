@@ -37,3 +37,8 @@ $ npm run build
 Licence
 -----------
 Source code is under [MIT Licence](http://opensource.org/licenses/mit-license.php).
+
+Credit
+-----------
+This project was based off of jsPacman
+https://github.com/8tentaculos/jsPacman
