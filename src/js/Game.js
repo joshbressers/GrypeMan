@@ -694,6 +694,11 @@ class JsPacman extends Game {
         }
 
         if (this._introStep == 0) {
+            var theText = " ";
+            document.getElementById('syft-1').innerText = theText;
+            document.getElementById('syft-2').innerText = theText;
+            document.getElementById('syft-3').innerText = theText;
+
             var theText = "GOOD MORNING GRYPE";
             document.getElementById('syft-1').innerText = theText;
 
@@ -715,12 +720,15 @@ class JsPacman extends Game {
             document.getElementById('syft-1').innerText = theText;
             var theText = "ALONE";
             document.getElementById('syft-2').innerText = theText;
+            var theText = " ";
+            document.getElementById('syft-3').innerText = theText;
 
             this._introStep = 2;
         } else if (this._introStep == 2) {
             var theText = " ";
             document.getElementById('syft-1').innerText = theText;
             document.getElementById('syft-2').innerText = theText;
+            document.getElementById('syft-3').innerText = theText;
 
             var theText = "HERE TAKE THIS";
             document.getElementById('syft-1').innerText = theText;
@@ -735,6 +743,7 @@ class JsPacman extends Game {
             var theText = " ";
             document.getElementById('syft-1').innerText = theText;
             document.getElementById('syft-2').innerText = theText;
+            document.getElementById('syft-3').innerText = theText;
 
             var theText = "SCAN IT";
             document.getElementById('syft-1').innerText = theText;
@@ -745,6 +754,7 @@ class JsPacman extends Game {
             var theText = " ";
             document.getElementById('syft-1').innerText = theText;
             document.getElementById('syft-2').innerText = theText;
+            document.getElementById('syft-3').innerText = theText;
 
             var theText = "IT WILL OPEN YOUR EYES";
             document.getElementById('syft-1').innerText = theText;
@@ -756,6 +766,7 @@ class JsPacman extends Game {
             var theText = " ";
             document.getElementById('syft-1').innerText = theText;
             document.getElementById('syft-2').innerText = theText;
+            document.getElementById('syft-3').innerText = theText;
             document.getElementById('sbom-img').style.visibility = "hidden";
 
             this._introDone = true;
