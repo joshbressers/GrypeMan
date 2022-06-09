@@ -30,7 +30,9 @@ const defaults = {
 
     // Start the game with a click
     events : {
-        'click .start' : 'startLevel'
+        'click .start' : 'startLevel',
+        'click .splash' : 'playIntro',
+        'click .nerd' : 'playIntro'
     }
 };
 
@@ -449,6 +451,22 @@ class JsPacman extends Game {
             if (this._gameOver) {
                 hide(this.elements.gameOver);
                 show(this.elements.splash);
+
+                if (this._introStep == -1) {
+                    var theText = "GAME OVER";
+                    document.getElementById('syft-1').innerText = theText;
+                    var theText = "SPACE TO PLAY AGAIN";
+                    document.getElementById('syft-3').innerText = theText;
+
+                    var theText = "LEARN MORE ABOUT";
+                    document.getElementById('grype-1').innerText = theText;
+                    var theText = "<a href=\"https://anchore.com/opensource/\">Syft AND Grype</a>";
+                    document.getElementById('grype-2').innerHTML = theText;
+                    var theText = " ";
+                    document.getElementById('grype-3').innerText = theText;
+                    this._introStep = 0;
+                }
+
                 return;
             }
 
@@ -590,13 +608,25 @@ class JsPacman extends Game {
         if (keys[KEY_UP]) {
             direction = 'u';
         }
+        else if (keys[75]) {
+            direction = 'u';
+        }
         else if (keys[KEY_RIGHT]) {
+            direction = 'r';
+        }
+        else if (keys[76]) {
             direction = 'r';
         }
         else if (keys[KEY_DOWN]) {
             direction = 'd';
         }
+        else if (keys[74]) {
+            direction = 'd';
+        }
         else if (keys[KEY_LEFT]) {
+            direction = 'l';
+        }
+        else if (keys[72]) {
             direction = 'l';
         }
 
@@ -664,7 +694,7 @@ class JsPacman extends Game {
         }
 
         if (this._introStep == 0) {
-            var theText = " ";
+            var theText = "GOOD MORNING GRYPE";
             document.getElementById('syft-1').innerText = theText;
 
             var theText = "I'M GOING";
