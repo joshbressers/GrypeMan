@@ -453,14 +453,16 @@ class JsPacman extends Game {
                 show(this.elements.splash);
 
                 if (this._introStep == -1) {
-                    var theText = "LEARN MORE";
+                    var theText = "GAME OVER";
                     document.getElementById('syft-1').innerText = theText;
+                    var theText = "SPACE TO PLAY AGAIN";
+                    document.getElementById('syft-3').innerText = theText;
 
-                    var theText = " ";
+                    var theText = "LEARN MORE ABOUT";
                     document.getElementById('grype-1').innerText = theText;
-                    var theText = "LINK 1";
-                    document.getElementById('grype-2').innerText = theText;
-                    var theText = "LINK 2";
+                    var theText = "<a href=\"https://anchore.com/opensource/\">Syft AND Grype</a>";
+                    document.getElementById('grype-2').innerHTML = theText;
+                    var theText = " ";
                     document.getElementById('grype-3').innerText = theText;
                     this._introStep = 0;
                 }
