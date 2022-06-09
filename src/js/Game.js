@@ -30,7 +30,9 @@ const defaults = {
 
     // Start the game with a click
     events : {
-        'click .start' : 'startLevel'
+        'click .start' : 'startLevel',
+        'click .splash' : 'playIntro',
+        'click .nerd' : 'playIntro'
     }
 };
 
@@ -590,13 +592,25 @@ class JsPacman extends Game {
         if (keys[KEY_UP]) {
             direction = 'u';
         }
+        else if (keys[75]) {
+            direction = 'u';
+        }
         else if (keys[KEY_RIGHT]) {
+            direction = 'r';
+        }
+        else if (keys[76]) {
             direction = 'r';
         }
         else if (keys[KEY_DOWN]) {
             direction = 'd';
         }
+        else if (keys[74]) {
+            direction = 'd';
+        }
         else if (keys[KEY_LEFT]) {
+            direction = 'l';
+        }
+        else if (keys[72]) {
             direction = 'l';
         }
 
