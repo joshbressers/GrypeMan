@@ -451,6 +451,20 @@ class JsPacman extends Game {
             if (this._gameOver) {
                 hide(this.elements.gameOver);
                 show(this.elements.splash);
+
+                if (this._introStep == -1) {
+                    var theText = "LEARN MORE";
+                    document.getElementById('syft-1').innerText = theText;
+
+                    var theText = " ";
+                    document.getElementById('grype-1').innerText = theText;
+                    var theText = "LINK 1";
+                    document.getElementById('grype-2').innerText = theText;
+                    var theText = "LINK 2";
+                    document.getElementById('grype-3').innerText = theText;
+                    this._introStep = 0;
+                }
+
                 return;
             }
 
@@ -678,7 +692,7 @@ class JsPacman extends Game {
         }
 
         if (this._introStep == 0) {
-            var theText = " ";
+            var theText = "GOOD MORNING GRYPE";
             document.getElementById('syft-1').innerText = theText;
 
             var theText = "I'M GOING";
